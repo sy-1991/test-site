@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>BridgeFlow｜中韩供应链咨询</title>
+  <style>
+    *{box-sizing:border-box;margin:0;padding:0}
+    body{font-family:Arial,"Microsoft YaHei",sans-serif;background:#f8fafc;color:#1f2937;line-height:1.7}
+    a{text-decoration:none;color:inherit}
+    header{background:#0f172a;color:white;padding:18px 8%;position:sticky;top:0}
+    nav{display:flex;justify-content:space-between;align-items:center}
+    .logo{font-size:22px;font-weight:800}.logo span{color:#facc15}
+    .nav a{margin-left:20px;font-size:14px;opacity:.9}
+    .hero{background:linear-gradient(135deg,#0f172a,#1d4ed8);color:white;padding:90px 8%}
+    .badge{display:inline-block;border:1px solid #ffffff55;border-radius:99px;padding:6px 14px;color:#fde68a;margin-bottom:18px}
+    h1{font-size:48px;max-width:900px;line-height:1.2;margin-bottom:20px}
+    .hero p{font-size:18px;max-width:760px;margin-bottom:30px;color:#e5e7eb}
+    .btn{display:inline-block;background:#facc15;color:#111827;padding:13px 24px;border-radius:99px;font-weight:800}
+    section{padding:70px 8%}
+    h2{font-size:34px;color:#0f172a;margin-bottom:12px}
+    .sub{color:#64748b;max-width:780px;margin-bottom:32px}
+    .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+    .card{background:white;border-radius:22px;padding:28px;box-shadow:0 12px 30px #0f172a14;border:1px solid #e5e7eb}
+    .card h3{color:#1d4ed8;margin-bottom:10px}
+    .about{background:white}
+    .two{display:grid;grid-template-columns:1fr 1fr;gap:34px;align-items:center}
+    .stats{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}
+    .stat{background:#eff6ff;padding:24px;border-radius:20px}
+    .stat strong{display:block;font-size:30px;color:#1d4ed8}
+    .process{background:#f1f5f9}
+    .step{background:white;margin-bottom:14px;padding:20px;border-radius:18px;border-left:6px solid #1d4ed8}
+    .contact{background:#0f172a;color:white}
+    .contact h2{color:white}.contact .sub{color:#cbd5e1}
+    .box{background:#ffffff14;border:1px solid #ffffff22;border-radius:22px;padding:26px;max-width:760px}
+    footer{background:#020617;color:#94a3b8;padding:24px 8%;font-size:14px}
+    @media(max-width:850px){.grid,.two{grid-template-columns:1fr}.nav{display:none}h1{font-size:36px}}
+  </style>
+</head>
+<body>
+
+<header>
+  <nav>
+    <div class="logo">Bridge<span>Flow</span></div>
+    <div class="nav">
+      <a href="#services">服务</a>
+      <a href="#about">优势</a>
+      <a href="#process">流程</a>
+      <a href="#contact">联系</a>
+    </div>
+  </nav>
+</header>
+
+<section class="hero">
+  <div class="badge">Korea · China · Global Supply Chain</div>
+  <h1>连接韩国市场与中国制造资源的供应链咨询伙伴</h1>
+  <p>专注中介贸易、OEM/ODM开发、供应商开发、成本优化、质量风险管理与项目落地支持。</p>
+  <a class="btn" href="#contact">预约初步咨询</a>
+</section>
+
+<section id="services">
+  <h2>核心服务</h2>
+  <p class="sub">从寻找供应商、报价谈判、样品推进到量产交付，我们帮助客户降低跨境合作风险。</p>
+  <div class="grid">
+    <div class="card"><h3>中介贸易对接</h3><p>匹配中国制造资源，协助询价、样品、订单与交付跟进。</p></div>
+    <div class="card"><h3>OEM / ODM开发</h3><p>支持产品定义、结构确认、BOM成本分析与量产准备。</p></div>
+    <div class="card"><h3>供应商评估</h3><p>从工厂能力、报价结构、认证经验、交付稳定性进行筛选。</p></div>
+    <div class="card"><h3>成本优化</h3><p>分析材料、模具、加工、包装与物流成本，提升报价透明度。</p></div>
+    <div class="card"><h3>质量风险管理</h3><p>提前识别认证、结构、测试、可靠性与量产风险。</p></div>
+    <div class="card"><h3>中韩双语沟通</h3><p>协助韩国客户与中国供应商准确传达需求和技术问题。</p></div>
+  </div>
+</section>
+
+<section class="about" id="about">
+  <div class="two">
+    <div>
+      <h2>不只是找工厂，更关注项目能否落地</h2>
+      <p class="sub">跨境供应链最大的风险不是价格，而是需求不清、供应商能力不匹配、质量问题发现太晚和量产沟通成本过高。</p>
+      <p>BridgeFlow 以采购、开发、质量和项目管理视角，为客户提供更接近实战的供应链咨询支持。</p>
+    </div>
+    <div class="stats">
+      <div class="stat"><strong>10+</strong>年供应链经验</div>
+      <div class="stat"><strong>QCD</strong>成本·质量·交期管理</div>
+      <div class="stat"><strong>OEM</strong>ODM项目支持</div>
+      <div class="stat"><strong>CN/KR</strong>中韩双语沟通</div>
+    </div>
+  </div>
+</section>
+
+<section id="target">
+  <h2>适合客户</h2>
+  <p class="sub">适合韩国品牌方、跨境贸易公司、小家电创业团队、OEM/ODM采购负责人，以及需要中国供应商资源的企业。</p>
+</section>
+
+<section class="process" id="process">
+  <h2>合作流程</h2>
+  <div class="step"><h3>01 需求确认</h3><p>确认产品、目标市场、预算、认证、数量和交付要求。</p></div>
+  <div class="step"><h3>02 供应商筛选</h3><p>根据产品类型、工厂能力、报价结构和风险点筛选资源。</p></div>
+  <div class="step"><h3>03 样品与报价推进</h3><p>协助样品确认、BOM分析、报价谈判和改善事项整理。</p></div>
+  <div class="step"><h3>04 量产与交付跟进</h3><p>跟进开发进度、质量问题、出货节点和后续改善。</p></div>
+</section>
+
+<section class="contact" id="contact">
+  <h2>开始你的供应链项目</h2>
+  <p class="sub">告诉我们你的产品方向和目标市场，我们会帮你整理第一步行动建议。</p>
+  <div class="box">
+    <p><strong>Email：</strong>your-email@example.com</p>
+    <p><strong>KakaoTalk：</strong>your-kakao-id</p>
+    <p><strong>WeChat：</strong>your-wechat-id</p>
+    <p><strong>服务范围：</strong>韩国 · 中国 · 全球客户</p>
+  </div>
+</section>
+
+<footer>
+  © 2026 BridgeFlow Supply Chain Consulting. All rights reserved.
+</footer>
+
+</body>
+</html>
