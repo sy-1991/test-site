@@ -1,154 +1,1397 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>BridgeFlow｜中韩供应链咨询</title>
-<style>
-*{box-sizing:border-box;margin:0;padding:0}
-body{font-family:Arial,"Microsoft YaHei",sans-serif;background:#f8fbff;color:#0f172a;line-height:1.7}
-a{text-decoration:none;color:inherit}
-header{height:76px;background:rgba(255,255,255,.9);backdrop-filter:blur(14px);display:flex;align-items:center;justify-content:space-between;padding:0 8%;position:sticky;top:0;z-index:10;box-shadow:0 8px 30px rgba(59,130,246,.08)}
-.logo{font-size:26px;font-weight:900}.logo span{color:#4f46e5}
-nav a{margin-left:34px;font-weight:700;font-size:15px}.cta{background:#4f46e5;color:white;padding:12px 22px;border-radius:14px}
-.hero{display:grid;grid-template-columns:1.05fr .95fr;align-items:center;gap:40px;padding:70px 8% 80px;background:linear-gradient(135deg,#f8fbff,#eef5ff 55%,#f3efff)}
-.badge{display:inline-block;border:1px solid #818cf8;color:#4f46e5;border-radius:999px;padding:7px 16px;font-weight:800;margin-bottom:24px;background:white}
-h1{font-size:58px;line-height:1.15;letter-spacing:-2px;margin-bottom:22px}
-h1 span{color:#4f46e5}
-.hero p{font-size:18px;color:#475569;max-width:680px;margin-bottom:30px}
-.btns{display:flex;gap:16px}.btn{padding:15px 28px;border-radius:18px;font-weight:900}
-.primary{background:#4f46e5;color:white;box-shadow:0 18px 35px rgba(79,70,229,.25)}
-.secondary{background:white;color:#4f46e5;border:1px solid #c7d2fe}
-.hero-art{height:430px;border-radius:38px;background:linear-gradient(145deg,#dbeafe,#ffffff);position:relative;overflow:hidden;box-shadow:0 30px 80px rgba(59,130,246,.18)}
-.globe{position:absolute;width:280px;height:280px;border-radius:50%;background:radial-gradient(circle at 30% 30%,#fff,#93c5fd 45%,#2563eb);right:70px;top:45px}
-.ship{position:absolute;font-size:82px;right:210px;bottom:80px}.truck{position:absolute;font-size:86px;right:50px;bottom:55px}.plane{position:absolute;font-size:66px;left:80px;top:110px;transform:rotate(-12deg)}
-.pin1,.pin2{position:absolute;font-size:34px}.pin1{right:250px;top:80px}.pin2{right:80px;top:95px}
-.features{display:flex;gap:30px;margin-top:38px;flex-wrap:wrap}.feature{display:flex;align-items:center;gap:12px;font-weight:800}.feature b{background:#e0e7ff;color:#4f46e5;padding:10px;border-radius:15px}
-section{padding:76px 8%}.center{text-align:center}.sub{color:#64748b;margin:10px auto 36px;max-width:760px}
-h2{font-size:40px;line-height:1.2}h2 span{color:#4f46e5}
-.grid{display:grid;grid-template-columns:repeat(5,1fr);gap:22px}
-.card{background:white;border-radius:26px;padding:30px 22px;text-align:center;box-shadow:0 16px 38px rgba(15,23,42,.08);border:1px solid #e5e7eb;transition:.25s}
-.card:hover{transform:translateY(-8px)}
-.icon{font-size:42px;margin-bottom:14px}.card h3{margin-bottom:10px}.card p{font-size:14px;color:#64748b}
-.adv{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center;background:linear-gradient(135deg,#eef2ff,#ffffff);padding:76px 8%}
-.stats{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}.stat{background:white;border-radius:24px;padding:26px;box-shadow:0 16px 35px rgba(79,70,229,.08)}
-.stat strong{font-size:34px;color:#4f46e5;display:block}
-.scene{height:380px;border-radius:34px;background:linear-gradient(135deg,#dbeafe,#f5f3ff);position:relative;overflow:hidden;box-shadow:0 30px 70px rgba(59,130,246,.15)}
-.person{position:absolute;font-size:118px;bottom:45px}.p1{left:95px}.p2{right:95px}
-.table{position:absolute;left:90px;right:90px;bottom:35px;height:58px;background:white;border-radius:24px;box-shadow:0 18px 45px rgba(15,23,42,.12)}
-.laptop{position:absolute;font-size:76px;left:230px;bottom:82px}
-.quote{position:absolute;right:30px;bottom:120px;background:#4f46e5;color:white;padding:18px 22px;border-radius:22px;max-width:260px;font-weight:700}
-.steps{display:grid;grid-template-columns:repeat(6,1fr);gap:18px}
-.step{text-align:center}.circle{width:72px;height:72px;border-radius:50%;background:#eef2ff;color:#4f46e5;display:grid;place-items:center;margin:0 auto 12px;font-size:30px}
-.contact{background:#0f172a;color:white}.contact h2{color:white}.contact .sub{color:#cbd5e1}
-.contactbox{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.contactitem{background:#ffffff12;border:1px solid #ffffff22;border-radius:22px;padding:24px}
-footer{background:#020617;color:#94a3b8;padding:24px 8%;text-align:center}
-@media(max-width:980px){.hero,.adv{grid-template-columns:1fr}.grid{grid-template-columns:1fr 1fr}.steps,.contactbox{grid-template-columns:1fr 1fr}nav{display:none}h1{font-size:42px}}
-@media(max-width:560px){.grid,.steps,.contactbox,.stats{grid-template-columns:1fr}.hero-art{height:320px}.globe{width:210px;height:210px;right:30px}.ship,.truck,.plane{font-size:54px}h1{font-size:34px}}
-</style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>BridgeFlow｜中韩供应链咨询</title>
+  <meta name="description" content="BridgeFlow 专注中韩贸易、中介贸易、供应商开发、OEM/ODM项目支持、质量管理与供应链咨询。" />
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    :root {
+      --blue: #3157ff;
+      --blue-dark: #132c7c;
+      --purple: #7c3aed;
+      --cyan: #31c6ff;
+      --mint: #4ade80;
+      --orange: #ffb020;
+      --pink: #ff4fb3;
+      --navy: #0b1224;
+      --text: #172033;
+      --muted: #64748b;
+      --line: #e5eaf3;
+      --bg: #f7faff;
+      --white: #ffffff;
+      --shadow: 0 24px 70px rgba(49, 87, 255, 0.14);
+      --radius: 28px;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: Arial, "Microsoft YaHei", "Noto Sans SC", sans-serif;
+      background:
+        radial-gradient(circle at 10% 5%, rgba(49, 198, 255, .18), transparent 30%),
+        radial-gradient(circle at 90% 0%, rgba(124, 58, 237, .16), transparent 28%),
+        var(--bg);
+      color: var(--text);
+      line-height: 1.7;
+      overflow-x: hidden;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    .page {
+      width: 100%;
+      overflow: hidden;
+    }
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      height: 78px;
+      background: rgba(255, 255, 255, .82);
+      backdrop-filter: blur(18px);
+      border-bottom: 1px solid rgba(226, 232, 240, .8);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 7%;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-weight: 900;
+      font-size: 25px;
+      letter-spacing: -0.6px;
+      color: var(--navy);
+    }
+
+    .logo-mark {
+      width: 38px;
+      height: 38px;
+      border-radius: 13px;
+      display: grid;
+      place-items: center;
+      background: linear-gradient(135deg, var(--blue), var(--pink));
+      color: #fff;
+      font-weight: 900;
+      box-shadow: 0 12px 28px rgba(49, 87, 255, .28);
+    }
+
+    nav {
+      display: flex;
+      align-items: center;
+      gap: 34px;
+      font-weight: 800;
+      font-size: 15px;
+      color: #1e293b;
+    }
+
+    nav a {
+      position: relative;
+      opacity: .88;
+    }
+
+    nav a:hover {
+      color: var(--blue);
+      opacity: 1;
+    }
+
+    .nav-cta {
+      padding: 12px 20px;
+      border-radius: 16px;
+      color: #fff;
+      background: linear-gradient(135deg, var(--blue), var(--purple));
+      box-shadow: 0 14px 30px rgba(49, 87, 255, .22);
+    }
+
+    .hero {
+      padding: 82px 7% 76px;
+      display: grid;
+      grid-template-columns: 1.02fr .98fr;
+      gap: 48px;
+      align-items: center;
+      min-height: 720px;
+      position: relative;
+    }
+
+    .hero::before {
+      content: "";
+      position: absolute;
+      width: 720px;
+      height: 720px;
+      border-radius: 50%;
+      right: -260px;
+      top: 60px;
+      background: linear-gradient(135deg, rgba(49, 87, 255, .18), rgba(49, 198, 255, .06));
+      z-index: -1;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 9px 16px;
+      border-radius: 999px;
+      background: rgba(255,255,255,.78);
+      border: 1px solid rgba(99,102,241,.28);
+      color: var(--blue);
+      font-weight: 900;
+      font-size: 14px;
+      box-shadow: 0 12px 30px rgba(49, 87, 255, .08);
+      margin-bottom: 24px;
+    }
+
+    .dot {
+      width: 9px;
+      height: 9px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--mint), var(--cyan));
+      box-shadow: 0 0 0 6px rgba(49,198,255,.12);
+    }
+
+    h1 {
+      font-size: clamp(42px, 5.6vw, 74px);
+      line-height: 1.06;
+      letter-spacing: -3px;
+      color: var(--navy);
+      margin-bottom: 24px;
+    }
+
+    h1 span {
+      background: linear-gradient(135deg, var(--blue), var(--purple));
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+
+    .hero-text {
+      max-width: 720px;
+      font-size: 18px;
+      color: #475569;
+      margin-bottom: 34px;
+    }
+
+    .btn-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
+      margin-bottom: 38px;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      padding: 15px 24px;
+      border-radius: 18px;
+      font-weight: 900;
+      transition: .22s;
+    }
+
+    .btn:hover {
+      transform: translateY(-3px);
+    }
+
+    .btn-primary {
+      color: #fff;
+      background: linear-gradient(135deg, var(--blue), var(--purple));
+      box-shadow: 0 18px 40px rgba(49, 87, 255, .26);
+    }
+
+    .btn-secondary {
+      background: #fff;
+      color: var(--blue);
+      border: 1px solid #d8defc;
+      box-shadow: 0 14px 30px rgba(15,23,42,.06);
+    }
+
+    .trust-row {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 16px;
+      max-width: 720px;
+    }
+
+    .trust {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding: 15px 16px;
+      background: rgba(255,255,255,.82);
+      border: 1px solid rgba(226,232,240,.9);
+      border-radius: 20px;
+      box-shadow: 0 16px 36px rgba(15,23,42,.05);
+    }
+
+    .trust-icon {
+      width: 38px;
+      height: 38px;
+      border-radius: 14px;
+      display: grid;
+      place-items: center;
+      background: #eef2ff;
+      color: var(--blue);
+      font-size: 20px;
+    }
+
+    .trust strong {
+      display: block;
+      color: var(--navy);
+      font-size: 15px;
+    }
+
+    .trust small {
+      color: var(--muted);
+      font-weight: 700;
+    }
+
+    .hero-visual {
+      position: relative;
+      min-height: 520px;
+    }
+
+    .visual-card {
+      position: absolute;
+      inset: 0;
+      border-radius: 42px;
+      background:
+        linear-gradient(145deg, rgba(255,255,255,.86), rgba(239,246,255,.62)),
+        radial-gradient(circle at 30% 25%, rgba(49,198,255,.2), transparent 32%);
+      border: 1px solid rgba(255,255,255,.9);
+      box-shadow: var(--shadow);
+      overflow: hidden;
+    }
+
+    .globe {
+      position: absolute;
+      width: 345px;
+      height: 345px;
+      border-radius: 50%;
+      right: 70px;
+      top: 58px;
+      background:
+        radial-gradient(circle at 28% 22%, #ffffff, #bfe2ff 34%, #5596ff 68%, #3157ff);
+      box-shadow: inset -34px -32px 60px rgba(19,44,124,.22), 0 30px 70px rgba(49,87,255,.20);
+    }
+
+    .globe::before {
+      content: "";
+      position: absolute;
+      inset: 42px;
+      border: 2px dashed rgba(255,255,255,.72);
+      border-radius: 50%;
+      transform: rotate(-18deg);
+    }
+
+    .route {
+      position: absolute;
+      width: 370px;
+      height: 160px;
+      border-top: 3px dashed rgba(49,87,255,.25);
+      border-radius: 50%;
+      right: 75px;
+      top: 160px;
+      transform: rotate(-12deg);
+    }
+
+    .pin {
+      position: absolute;
+      width: 64px;
+      height: 64px;
+      border-radius: 20px 20px 20px 6px;
+      transform: rotate(-45deg);
+      display: grid;
+      place-items: center;
+      color: #fff;
+      font-weight: 900;
+      box-shadow: 0 16px 28px rgba(15,23,42,.16);
+    }
+
+    .pin span {
+      transform: rotate(45deg);
+      font-size: 22px;
+    }
+
+    .pin.cn {
+      background: linear-gradient(135deg, #ff4b4b, #ff9f1c);
+      right: 320px;
+      top: 120px;
+    }
+
+    .pin.kr {
+      background: linear-gradient(135deg, #3157ff, #7c3aed);
+      right: 80px;
+      top: 105px;
+    }
+
+    .transport {
+      position: absolute;
+      filter: drop-shadow(0 16px 25px rgba(15,23,42,.18));
+    }
+
+    .plane {
+      left: 75px;
+      top: 132px;
+      font-size: 74px;
+      transform: rotate(-12deg);
+    }
+
+    .ship {
+      left: 72px;
+      bottom: 96px;
+      font-size: 105px;
+    }
+
+    .truck {
+      right: 42px;
+      bottom: 70px;
+      font-size: 108px;
+    }
+
+    .floating-note {
+      position: absolute;
+      right: 38px;
+      bottom: 205px;
+      width: 250px;
+      padding: 20px;
+      border-radius: 24px;
+      color: white;
+      background: linear-gradient(135deg, rgba(49,87,255,.94), rgba(124,58,237,.9));
+      box-shadow: 0 22px 44px rgba(49,87,255,.24);
+      font-weight: 800;
+      backdrop-filter: blur(12px);
+    }
+
+    .mini-panel {
+      position: absolute;
+      left: 36px;
+      top: 38px;
+      background: rgba(255,255,255,.86);
+      border: 1px solid rgba(226,232,240,.8);
+      border-radius: 22px;
+      padding: 18px 20px;
+      box-shadow: 0 20px 42px rgba(15,23,42,.08);
+    }
+
+    .mini-panel strong {
+      display: block;
+      color: var(--navy);
+      font-size: 18px;
+    }
+
+    .mini-panel small {
+      color: var(--muted);
+      font-weight: 700;
+    }
+
+    section {
+      padding: 86px 7%;
+    }
+
+    .section-head {
+      text-align: center;
+      max-width: 840px;
+      margin: 0 auto 44px;
+    }
+
+    .label {
+      display: inline-block;
+      padding: 8px 16px;
+      border-radius: 999px;
+      color: var(--blue);
+      background: rgba(49,87,255,.08);
+      border: 1px solid rgba(49,87,255,.16);
+      font-weight: 900;
+      margin-bottom: 14px;
+    }
+
+    h2 {
+      font-size: clamp(32px, 4.2vw, 52px);
+      line-height: 1.15;
+      letter-spacing: -1.4px;
+      color: var(--navy);
+      margin-bottom: 15px;
+    }
+
+    h2 span {
+      color: var(--blue);
+    }
+
+    .section-sub {
+      color: var(--muted);
+      font-size: 17px;
+    }
+
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 22px;
+    }
+
+    .service-card {
+      position: relative;
+      overflow: hidden;
+      padding: 30px;
+      min-height: 245px;
+      border-radius: var(--radius);
+      background: rgba(255,255,255,.9);
+      border: 1px solid rgba(226,232,240,.92);
+      box-shadow: 0 20px 46px rgba(15,23,42,.06);
+      transition: .24s;
+    }
+
+    .service-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 30px 70px rgba(49,87,255,.14);
+    }
+
+    .service-card::after {
+      content: "";
+      position: absolute;
+      right: -40px;
+      top: -40px;
+      width: 140px;
+      height: 140px;
+      border-radius: 50%;
+      background: rgba(49,87,255,.08);
+    }
+
+    .service-card:nth-child(2)::after { background: rgba(49,198,255,.12); }
+    .service-card:nth-child(3)::after { background: rgba(74,222,128,.12); }
+    .service-card:nth-child(4)::after { background: rgba(255,176,32,.13); }
+    .service-card:nth-child(5)::after { background: rgba(255,79,179,.11); }
+    .service-card:nth-child(6)::after { background: rgba(124,58,237,.11); }
+
+    .service-icon {
+      width: 62px;
+      height: 62px;
+      border-radius: 22px;
+      display: grid;
+      place-items: center;
+      font-size: 30px;
+      background: linear-gradient(135deg, #eef2ff, #fff);
+      border: 1px solid rgba(226,232,240,.9);
+      margin-bottom: 18px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .service-card h3 {
+      font-size: 22px;
+      color: var(--navy);
+      margin-bottom: 10px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .service-card p {
+      color: #64748b;
+      position: relative;
+      z-index: 1;
+    }
+
+    .advantage {
+      background:
+        linear-gradient(135deg, rgba(239,246,255,.9), rgba(250,245,255,.8)),
+        radial-gradient(circle at 92% 20%, rgba(49,198,255,.18), transparent 30%);
+      padding-top: 92px;
+      padding-bottom: 92px;
+    }
+
+    .adv-wrap {
+      display: grid;
+      grid-template-columns: .95fr 1.05fr;
+      gap: 44px;
+      align-items: center;
+    }
+
+    .adv-text .section-head {
+      text-align: left;
+      margin: 0 0 32px;
+    }
+
+    .stats {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0,1fr));
+      gap: 18px;
+    }
+
+    .stat {
+      padding: 26px;
+      border-radius: 26px;
+      background: rgba(255,255,255,.9);
+      border: 1px solid rgba(226,232,240,.9);
+      box-shadow: 0 18px 40px rgba(15,23,42,.06);
+    }
+
+    .stat-icon {
+      font-size: 30px;
+      margin-bottom: 10px;
+    }
+
+    .stat strong {
+      display: block;
+      font-size: 36px;
+      line-height: 1.05;
+      color: var(--blue);
+      margin-bottom: 8px;
+    }
+
+    .stat span {
+      font-weight: 900;
+      color: var(--navy);
+    }
+
+    .stat p {
+      color: var(--muted);
+      font-size: 14px;
+      margin-top: 6px;
+    }
+
+    .business-scene {
+      position: relative;
+      height: 500px;
+      border-radius: 40px;
+      overflow: hidden;
+      background:
+        linear-gradient(180deg, rgba(255,255,255,.4), rgba(255,255,255,.1)),
+        linear-gradient(135deg, #dbeafe, #f5f3ff);
+      box-shadow: var(--shadow);
+      border: 1px solid rgba(255,255,255,.8);
+    }
+
+    .office-bg {
+      position: absolute;
+      inset: 0;
+      background:
+        linear-gradient(to bottom, rgba(255,255,255,.22), rgba(255,255,255,.1)),
+        repeating-linear-gradient(90deg, rgba(49,87,255,.05) 0 2px, transparent 2px 110px),
+        linear-gradient(135deg, rgba(255,255,255,.5), rgba(49,87,255,.08));
+    }
+
+    .window-line {
+      position: absolute;
+      top: 56px;
+      left: 0;
+      right: 0;
+      height: 1px;
+      background: rgba(49,87,255,.16);
+    }
+
+    .desk {
+      position: absolute;
+      left: 8%;
+      right: 8%;
+      bottom: 48px;
+      height: 86px;
+      border-radius: 34px;
+      background: rgba(255,255,255,.92);
+      box-shadow: 0 24px 60px rgba(15,23,42,.12);
+      border: 1px solid rgba(255,255,255,.8);
+    }
+
+    .person {
+      position: absolute;
+      bottom: 92px;
+      width: 155px;
+      height: 220px;
+      border-radius: 76px 76px 44px 44px;
+      background: linear-gradient(180deg, #1e3a8a, #3157ff);
+      box-shadow: 0 24px 50px rgba(15,23,42,.16);
+    }
+
+    .person::before {
+      content: "";
+      position: absolute;
+      width: 82px;
+      height: 82px;
+      top: -54px;
+      left: 36px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, #ffe0bd, #f3b98f);
+      box-shadow: inset -10px -8px 0 rgba(123,63,0,.06);
+    }
+
+    .person::after {
+      content: "";
+      position: absolute;
+      width: 90px;
+      height: 40px;
+      top: -64px;
+      left: 31px;
+      border-radius: 50px 50px 18px 18px;
+      background: #1f2937;
+    }
+
+    .person.man {
+      left: 27%;
+    }
+
+    .person.woman {
+      right: 18%;
+      background: linear-gradient(180deg, #ffffff, #c7d2fe);
+      border: 1px solid rgba(255,255,255,.8);
+    }
+
+    .person.woman::after {
+      background: #3f2d2d;
+      height: 58px;
+      border-radius: 52px 52px 28px 28px;
+    }
+
+    .laptop {
+      position: absolute;
+      left: 44%;
+      bottom: 116px;
+      width: 145px;
+      height: 92px;
+      border-radius: 18px 18px 8px 8px;
+      background: linear-gradient(135deg, #ffffff, #dbeafe);
+      border: 2px solid rgba(49,87,255,.12);
+      box-shadow: 0 18px 42px rgba(15,23,42,.13);
+    }
+
+    .laptop::after {
+      content: "";
+      position: absolute;
+      left: -18px;
+      right: -18px;
+      bottom: -16px;
+      height: 16px;
+      border-radius: 0 0 18px 18px;
+      background: #dbeafe;
+    }
+
+    .chart-card {
+      position: absolute;
+      left: 10%;
+      top: 52px;
+      width: 190px;
+      padding: 18px;
+      border-radius: 24px;
+      background: rgba(255,255,255,.82);
+      border: 1px solid rgba(255,255,255,.9);
+      box-shadow: 0 18px 42px rgba(15,23,42,.08);
+    }
+
+    .chart-bars {
+      display: flex;
+      align-items: flex-end;
+      gap: 8px;
+      height: 78px;
+      margin-top: 12px;
+    }
+
+    .bar {
+      flex: 1;
+      border-radius: 999px;
+      background: linear-gradient(180deg, var(--blue), var(--cyan));
+    }
+
+    .bar:nth-child(1){height:35%}
+    .bar:nth-child(2){height:62%}
+    .bar:nth-child(3){height:48%}
+    .bar:nth-child(4){height:82%}
+
+    .quote-box {
+      position: absolute;
+      right: 34px;
+      bottom: 126px;
+      width: 285px;
+      padding: 22px;
+      border-radius: 26px;
+      background: linear-gradient(135deg, rgba(49,87,255,.92), rgba(124,58,237,.92));
+      color: white;
+      box-shadow: 0 24px 52px rgba(49,87,255,.26);
+      font-weight: 800;
+    }
+
+    .process-grid {
+      display: grid;
+      grid-template-columns: repeat(6, minmax(0,1fr));
+      gap: 18px;
+      position: relative;
+    }
+
+    .step {
+      text-align: center;
+      position: relative;
+      padding: 18px 10px;
+    }
+
+    .step:not(:last-child)::after {
+      content: "";
+      position: absolute;
+      top: 52px;
+      right: -20px;
+      width: 40px;
+      border-top: 2px dashed rgba(49,87,255,.25);
+    }
+
+    .step-circle {
+      width: 76px;
+      height: 76px;
+      border-radius: 50%;
+      margin: 0 auto 14px;
+      display: grid;
+      place-items: center;
+      font-size: 30px;
+      background: linear-gradient(135deg, #eef2ff, #fff);
+      border: 1px solid #dfe6ff;
+      box-shadow: 0 18px 36px rgba(49,87,255,.08);
+    }
+
+    .step strong {
+      display: block;
+      color: var(--blue);
+      margin-bottom: 6px;
+    }
+
+    .step h3 {
+      color: var(--navy);
+      font-size: 18px;
+      margin-bottom: 4px;
+    }
+
+    .step p {
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .clients {
+      background: #fff;
+    }
+
+    .client-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0,1fr));
+      gap: 20px;
+    }
+
+    .client-card {
+      padding: 26px;
+      border-radius: 26px;
+      background: linear-gradient(135deg, #f8fbff, #ffffff);
+      border: 1px solid #e5eaf3;
+      box-shadow: 0 18px 38px rgba(15,23,42,.05);
+    }
+
+    .client-card h3 {
+      font-size: 20px;
+      margin-bottom: 8px;
+      color: var(--navy);
+    }
+
+    .client-card p {
+      color: var(--muted);
+    }
+
+    .about {
+      padding-top: 30px;
+    }
+
+    .about-box {
+      display: grid;
+      grid-template-columns: 1fr .8fr;
+      gap: 34px;
+      align-items: center;
+      padding: 42px;
+      border-radius: 38px;
+      background:
+        linear-gradient(135deg, rgba(15,23,42,.96), rgba(30,41,59,.92)),
+        radial-gradient(circle at 90% 20%, rgba(49,87,255,.4), transparent 28%);
+      color: white;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .about-box h2 {
+      color: white;
+    }
+
+    .about-box p {
+      color: #cbd5e1;
+      font-size: 17px;
+      margin-top: 12px;
+    }
+
+    .about-points {
+      display: grid;
+      gap: 14px;
+    }
+
+    .about-point {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding: 16px;
+      border-radius: 18px;
+      background: rgba(255,255,255,.08);
+      border: 1px solid rgba(255,255,255,.12);
+      color: #e5e7eb;
+      font-weight: 800;
+    }
+
+    .contact {
+      padding-top: 88px;
+      background:
+        radial-gradient(circle at 12% 35%, rgba(49,198,255,.16), transparent 30%),
+        linear-gradient(135deg, #f8fbff, #eef2ff);
+    }
+
+    .contact-panel {
+      display: grid;
+      grid-template-columns: .9fr 1.1fr;
+      gap: 28px;
+      align-items: stretch;
+      padding: 34px;
+      border-radius: 38px;
+      background: rgba(255,255,255,.86);
+      border: 1px solid rgba(226,232,240,.9);
+      box-shadow: var(--shadow);
+    }
+
+    .contact-left {
+      padding: 32px;
+      border-radius: 30px;
+      color: white;
+      background: linear-gradient(135deg, var(--blue), var(--purple));
+    }
+
+    .contact-left h2 {
+      color: white;
+      font-size: 42px;
+    }
+
+    .contact-left p {
+      color: rgba(255,255,255,.82);
+      margin-top: 14px;
+    }
+
+    .contact-items {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0,1fr));
+      gap: 16px;
+    }
+
+    .contact-item {
+      padding: 24px;
+      border-radius: 26px;
+      background: #f8fbff;
+      border: 1px solid #e5eaf3;
+    }
+
+    .contact-item h3 {
+      margin-bottom: 8px;
+      color: var(--navy);
+    }
+
+    .contact-item p {
+      color: var(--muted);
+      word-break: break-all;
+    }
+
+    footer {
+      padding: 26px 7%;
+      color: #94a3b8;
+      background: #020617;
+      display: flex;
+      justify-content: space-between;
+      gap: 18px;
+      flex-wrap: wrap;
+      font-size: 14px;
+    }
+
+    @media (max-width: 1080px) {
+      nav {
+        display: none;
+      }
+
+      .hero,
+      .adv-wrap,
+      .about-box,
+      .contact-panel {
+        grid-template-columns: 1fr;
+      }
+
+      .hero {
+        min-height: auto;
+      }
+
+      .services-grid,
+      .client-grid {
+        grid-template-columns: repeat(2, minmax(0,1fr));
+      }
+
+      .process-grid {
+        grid-template-columns: repeat(3, minmax(0,1fr));
+      }
+
+      .step::after {
+        display: none;
+      }
+    }
+
+    @media (max-width: 720px) {
+      header {
+        padding: 0 5%;
+      }
+
+      .hero,
+      section {
+        padding-left: 5%;
+        padding-right: 5%;
+      }
+
+      .trust-row,
+      .services-grid,
+      .stats,
+      .process-grid,
+      .client-grid,
+      .contact-items {
+        grid-template-columns: 1fr;
+      }
+
+      .hero-visual {
+        min-height: 430px;
+      }
+
+      .globe {
+        width: 260px;
+        height: 260px;
+        right: 25px;
+      }
+
+      .ship {
+        left: 36px;
+        font-size: 78px;
+      }
+
+      .truck {
+        right: 20px;
+        font-size: 80px;
+      }
+
+      .plane {
+        left: 35px;
+        font-size: 58px;
+      }
+
+      .floating-note,
+      .mini-panel {
+        display: none;
+      }
+
+      .business-scene {
+        height: 420px;
+      }
+
+      .person {
+        width: 118px;
+        height: 175px;
+      }
+
+      .person.man {
+        left: 14%;
+      }
+
+      .person.woman {
+        right: 12%;
+      }
+
+      .quote-box,
+      .chart-card {
+        display: none;
+      }
+
+      .contact-panel,
+      .about-box {
+        padding: 24px;
+      }
+
+      footer {
+        display: block;
+        text-align: center;
+      }
+    }
+  </style>
 </head>
+
 <body>
+  <div class="page">
 
-<header>
-  <div class="logo">Bridge<span>Flow</span></div>
-  <nav>
-    <a href="#services">服务</a>
-    <a href="#adv">优势</a>
-    <a href="#process">流程</a>
-    <a href="#contact" class="cta">立即咨询</a>
-  </nav>
-</header>
+    <header>
+      <a class="logo" href="#">
+        <div class="logo-mark">B</div>
+        <div>BridgeFlow</div>
+      </a>
 
-<section class="hero">
-  <div>
-    <div class="badge">中韩供应链解决方案专家</div>
-    <h1>连接中国供应链<br>赋能<span>韩国市场增长</span></h1>
-    <p>BridgeFlow 致力于为韩国客户提供高效、可靠的一站式中韩供应链服务，让贸易更简单，让合作更高效。</p>
-    <div class="btns">
-      <a class="btn primary" href="#services">我们的服务 →</a>
-      <a class="btn secondary" href="#adv">关于我们 →</a>
-    </div>
-    <div class="features">
-      <div class="feature"><b>🚚</b>高效物流</div>
-      <div class="feature"><b>🛡️</b>品质保障</div>
-      <div class="feature"><b>👥</b>专业服务</div>
-    </div>
+      <nav>
+        <a href="#services">服务</a>
+        <a href="#advantage">优势</a>
+        <a href="#process">流程</a>
+        <a href="#clients">适合客户</a>
+        <a href="#about">关于我们</a>
+        <a class="nav-cta" href="#contact">立即咨询</a>
+      </nav>
+    </header>
+
+    <main>
+
+      <section class="hero">
+        <div>
+          <div class="eyebrow">
+            <span class="dot"></span>
+            中韩供应链解决方案专家
+          </div>
+
+          <h1>
+            连接中国供应链<br />
+            赋能<span>韩国市场增长</span>
+          </h1>
+
+          <p class="hero-text">
+            BridgeFlow 为韩国品牌方、贸易公司与创业团队提供高效、可靠的一站式中韩供应链服务。
+            从供应商开发、采购、质检、物流到项目落地，让贸易更简单，让合作更高效。
+          </p>
+
+          <div class="btn-row">
+            <a class="btn btn-primary" href="#services">我们的服务 →</a>
+            <a class="btn btn-secondary" href="#contact">预约初步咨询</a>
+          </div>
+
+          <div class="trust-row">
+            <div class="trust">
+              <div class="trust-icon">🚚</div>
+              <div>
+                <strong>高效物流</strong>
+                <small>稳定 · 安全 · 准时</small>
+              </div>
+            </div>
+
+            <div class="trust">
+              <div class="trust-icon">🛡️</div>
+              <div>
+                <strong>品质保障</strong>
+                <small>严格筛选 · 质量把控</small>
+              </div>
+            </div>
+
+            <div class="trust">
+              <div class="trust-icon">👥</div>
+              <div>
+                <strong>专业服务</strong>
+                <small>中韩团队 · 响应迅速</small>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero-visual">
+          <div class="visual-card">
+            <div class="mini-panel">
+              <strong>CN ⇄ KR</strong>
+              <small>供应商 · 物流 · 项目落地</small>
+            </div>
+
+            <div class="globe"></div>
+            <div class="route"></div>
+            <div class="pin cn"><span>中</span></div>
+            <div class="pin kr"><span>韩</span></div>
+            <div class="transport plane">✈️</div>
+            <div class="transport ship">🚢</div>
+            <div class="transport truck">🚛</div>
+
+            <div class="floating-note">
+              Reliable supply chain partner for Korea market.
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="services">
+        <div class="section-head">
+          <div class="label">我们的服务</div>
+          <h2>一站式<span>供应链服务</span></h2>
+          <p class="section-sub">
+            从采购到交付，我们帮助客户打通每一个关键环节，降低跨境合作中的时间成本、沟通成本和质量风险。
+          </p>
+        </div>
+
+        <div class="services-grid">
+          <div class="service-card">
+            <div class="service-icon">🔎</div>
+            <h3>供应商开发</h3>
+            <p>根据产品方向筛选中国优质制造商，协助询价、资质确认、合作条件沟通。</p>
+          </div>
+
+          <div class="service-card">
+            <div class="service-icon">🧩</div>
+            <h3>OEM / ODM 支持</h3>
+            <p>从产品定义、样品、报价到量产准备，协助推进开发型采购项目。</p>
+          </div>
+
+          <div class="service-card">
+            <div class="service-icon">📦</div>
+            <h3>采购与订单跟进</h3>
+            <p>推进样品、报价、订单、交期和供应商沟通，提高项目执行效率。</p>
+          </div>
+
+          <div class="service-card">
+            <div class="service-icon">🛡️</div>
+            <h3>质检与质量管理</h3>
+            <p>协助样品确认、量产检查、质量问题改善和风险闭环管理。</p>
+          </div>
+
+          <div class="service-card">
+            <div class="service-icon">💰</div>
+            <h3>成本优化</h3>
+            <p>分析 BOM、模具、包装、物流等成本，提升报价透明度与竞争力。</p>
+          </div>
+
+          <div class="service-card">
+            <div class="service-icon">🚢</div>
+            <h3>物流与清关</h3>
+            <p>支持中韩物流、仓储、清关、配送等交付环节，提升交付稳定性。</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="advantage" id="advantage">
+        <div class="adv-wrap">
+          <div class="adv-text">
+            <div class="section-head">
+              <div class="label">为什么选择我们</div>
+              <h2>我们是您的<span>供应链增长伙伴</span></h2>
+              <p class="section-sub">
+                BridgeFlow 不只是做资源对接，更从成本、质量、认证、交付和项目进度等角度帮助客户建立更稳定的供应链合作模式。
+              </p>
+            </div>
+
+            <div class="stats">
+              <div class="stat">
+                <div class="stat-icon">🏆</div>
+                <strong>10+</strong>
+                <span>年行业经验</span>
+                <p>深耕中韩供应链与小家电项目。</p>
+              </div>
+
+              <div class="stat">
+                <div class="stat-icon">🤝</div>
+                <strong>500+</strong>
+                <span>合作资源</span>
+                <p>覆盖制造、物流、认证、质检资源。</p>
+              </div>
+
+              <div class="stat">
+                <div class="stat-icon">🌐</div>
+                <strong>1000+</strong>
+                <span>优质供应商池</span>
+                <p>帮助客户快速定位合适工厂。</p>
+              </div>
+
+              <div class="stat">
+                <div class="stat-icon">⚡</div>
+                <strong>24h</strong>
+                <span>快速响应</span>
+                <p>中韩双语沟通，降低误解和延误。</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="business-scene">
+            <div class="office-bg"></div>
+            <div class="window-line"></div>
+
+            <div class="chart-card">
+              <strong>Project Status</strong>
+              <div class="chart-bars">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+              </div>
+            </div>
+
+            <div class="person man"></div>
+            <div class="person woman"></div>
+            <div class="laptop"></div>
+            <div class="desk"></div>
+
+            <div class="quote-box">
+              我们不仅是服务提供者，更是您在中韩市场中的增长伙伴。
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="process">
+        <div class="section-head">
+          <div class="label">合作流程</div>
+          <h2>简单 6 步，<span>轻松合作</span></h2>
+          <p class="section-sub">
+            用清晰流程推进项目，把复杂的跨境合作拆解成可执行、可跟踪、可改善的任务。
+          </p>
+        </div>
+
+        <div class="process-grid">
+          <div class="step">
+            <div class="step-circle">💬</div>
+            <strong>01</strong>
+            <h3>需求沟通</h3>
+            <p>确认产品、市场、预算与交付目标。</p>
+          </div>
+
+          <div class="step">
+            <div class="step-circle">📋</div>
+            <strong>02</strong>
+            <h3>方案制定</h3>
+            <p>制定供应商、成本、物流和项目方案。</p>
+          </div>
+
+          <div class="step">
+            <div class="step-circle">🤝</div>
+            <strong>03</strong>
+            <h3>确认合作</h3>
+            <p>确认合作范围、时间计划和执行方式。</p>
+          </div>
+
+          <div class="step">
+            <div class="step-circle">📦</div>
+            <strong>04</strong>
+            <h3>采购质检</h3>
+            <p>推进采购、样品确认和质量把控。</p>
+          </div>
+
+          <div class="step">
+            <div class="step-circle">🚢</div>
+            <strong>05</strong>
+            <h3>物流运输</h3>
+            <p>安排中韩运输、清关、仓储和配送。</p>
+          </div>
+
+          <div class="step">
+            <div class="step-circle">✅</div>
+            <strong>06</strong>
+            <h3>交付完成</h3>
+            <p>完成交付并跟进后续改善。</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="clients" id="clients">
+        <div class="section-head">
+          <div class="label">适合客户</div>
+          <h2>我们适合服务<span>这些团队</span></h2>
+          <p class="section-sub">
+            无论您是想寻找中国制造资源，还是希望将产品稳定导入韩国市场，我们都可以从项目初期开始协助。
+          </p>
+        </div>
+
+        <div class="client-grid">
+          <div class="client-card">
+            <h3>韩国品牌方</h3>
+            <p>需要中国供应商资源、OEM/ODM开发支持、成本优化和稳定交付的品牌团队。</p>
+          </div>
+
+          <div class="client-card">
+            <h3>跨境贸易公司</h3>
+            <p>希望提升供应商管理效率、减少沟通误差、降低质量风险的贸易团队。</p>
+          </div>
+
+          <div class="client-card">
+            <h3>小家电创业团队</h3>
+            <p>需要从产品定义、样品开发、认证方向到量产落地的全流程支持。</p>
+          </div>
+
+          <div class="client-card">
+            <h3>OEM / ODM 采购团队</h3>
+            <p>需要更快找工厂、比价、拆解成本、推进样品和开发节点的采购负责人。</p>
+          </div>
+
+          <div class="client-card">
+            <h3>需要供应商替换的企业</h3>
+            <p>当前供应商成本高、交期不稳定、质量问题频发时，协助寻找替代方案。</p>
+          </div>
+
+          <div class="client-card">
+            <h3>想降低量产风险的项目团队</h3>
+            <p>在开发初期提前识别结构、质量、认证和量产风险，减少后期返工。</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="about" id="about">
+        <div class="about-box">
+          <div>
+            <div class="label">关于 BridgeFlow</div>
+            <h2>不只是中介，而是您的供应链长期伙伴</h2>
+            <p>
+              BridgeFlow 不是简单的信息对接平台。我们从供应商开发、成本分析、品质风险、认证要求和项目进度等角度出发，
+              帮助客户建立更稳定、更透明、更高效的中韩供应链合作模式。
+            </p>
+          </div>
+
+          <div class="about-points">
+            <div class="about-point">✓ 中韩双语沟通，减少信息误差</div>
+            <div class="about-point">✓ 采购、质量、开发、项目管理综合视角</div>
+            <div class="about-point">✓ 从找资源到交付落地的闭环支持</div>
+            <div class="about-point">✓ 适合品牌方、贸易公司与创业团队</div>
+          </div>
+        </div>
+      </section>
+
+      <section class="contact" id="contact">
+        <div class="contact-panel">
+          <div class="contact-left">
+            <h2>准备好优化您的供应链了吗？</h2>
+            <p>
+              告诉我们你的产品方向、目标市场和当前问题，我们会帮你整理第一步行动建议。
+            </p>
+          </div>
+
+          <div class="contact-items">
+            <div class="contact-item">
+              <h3>📧 Email</h3>
+              <p>your-email@example.com</p>
+            </div>
+
+            <div class="contact-item">
+              <h3>💬 KakaoTalk</h3>
+              <p>your-kakao-id</p>
+            </div>
+
+            <div class="contact-item">
+              <h3>💚 WeChat</h3>
+              <p>your-wechat-id</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+    </main>
+
+    <footer>
+      <span>© 2026 BridgeFlow Supply Chain Consulting. All rights reserved.</span>
+      <span>Korea · China · Global Supply Chain</span>
+    </footer>
+
   </div>
-
-  <div class="hero-art">
-    <div class="globe"></div>
-    <div class="pin1">🇨🇳</div>
-    <div class="pin2">🇰🇷</div>
-    <div class="plane">✈️</div>
-    <div class="ship">🚢</div>
-    <div class="truck">🚛</div>
-  </div>
-</section>
-
-<section id="services" class="center">
-  <div class="badge">我们的服务</div>
-  <h2>一站式<span>供应链服务</span></h2>
-  <p class="sub">从采购到交付，我们为您打通每一个环节。</p>
-
-  <div class="grid">
-    <div class="card"><div class="icon">🛒</div><h3>采购服务</h3><p>中国优质供应商资源对接，帮助客户高效采购。</p></div>
-    <div class="card"><div class="icon">📦</div><h3>质检服务</h3><p>专业质检团队，全流程质量把控。</p></div>
-    <div class="card"><div class="icon">🚢</div><h3>国际物流</h3><p>海运、空运、陆运方案灵活选择。</p></div>
-    <div class="card"><div class="icon">🏭</div><h3>仓储服务</h3><p>中国及韩国仓储支持，降低库存成本。</p></div>
-    <div class="card"><div class="icon">🎧</div><h3>清关与配送</h3><p>专业清关团队，快速通关与本地配送。</p></div>
-  </div>
-</section>
-
-<section class="adv" id="adv">
-  <div>
-    <div class="badge">为什么选择我们</div>
-    <h2>我们式<span>核心优势</span></h2>
-    <p class="sub" style="margin-left:0">专业、可靠、值得信赖的中韩供应链合作伙伴。</p>
-    <div class="stats">
-      <div class="stat"><strong>10+</strong>年行业经验</div>
-      <div class="stat"><strong>500+</strong>合作客户</div>
-      <div class="stat"><strong>1000+</strong>优质供应商</div>
-      <div class="stat"><strong>24h</strong>快速响应</div>
-    </div>
-  </div>
-
-  <div class="scene">
-    <div class="person p1">👨‍💼</div>
-    <div class="person p2">👩‍💼</div>
-    <div class="table"></div>
-    <div class="laptop">💻</div>
-    <div class="quote">我们不仅是服务提供者，更是您在中韩市场中的增长伙伴。</div>
-  </div>
-</section>
-
-<section id="process" class="center">
-  <div class="badge">合作流程</div>
-  <h2>简单 6 步，轻松合作</h2>
-  <p class="sub">用清晰流程推进项目，减少跨境合作中的不确定性。</p>
-
-  <div class="steps">
-    <div class="step"><div class="circle">💬</div><h3>01</h3><p>需求沟通</p></div>
-    <div class="step"><div class="circle">📋</div><h3>02</h3><p>方案制定</p></div>
-    <div class="step"><div class="circle">📝</div><h3>03</h3><p>确认合作</p></div>
-    <div class="step"><div class="circle">📦</div><h3>04</h3><p>采购质检</p></div>
-    <div class="step"><div class="circle">🚢</div><h3>05</h3><p>物流运输</p></div>
-    <div class="step"><div class="circle">✅</div><h3>06</h3><p>交付完成</p></div>
-  </div>
-</section>
-
-<section class="contact" id="contact">
-  <div class="center">
-    <h2>准备好优化您的供应链了吗？</h2>
-    <p class="sub">立即联系我们，获取专属解决方案。</p>
-  </div>
-  <div class="contactbox">
-    <div class="contactitem"><h3>📧 Email</h3><p>your-email@example.com</p></div>
-    <div class="contactitem"><h3>💬 KakaoTalk</h3><p>your-kakao-id</p></div>
-    <div class="contactitem"><h3>💚 WeChat</h3><p>your-wechat-id</p></div>
-  </div>
-</section>
-
-<footer>© 2026 BridgeFlow Supply Chain Consulting. All rights reserved.</footer>
-
 </body>
 </html>
